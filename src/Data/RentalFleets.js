@@ -1,9 +1,8 @@
 
 
-
  const RentalFleets = [
     {
-        carImage : "../../src/assets/Cars fleet/Hatchback/Hyundai Grand i10.webp",
+        carImage : "../assets/Cars fleet/Hatchback/Hyundai Grand i10.webp",
         pricePerDay : "Rs 5000 ",
         carTitle : "Hyundai Grand i10",
         carYear : "2016",
@@ -18,7 +17,7 @@
     },
 
     {
-        carImage : "../../src/assets/Cars fleet/Hatchback/Hyundai i20.webp",
+        carImage : "../assets/Cars fleet/Hatchback/Hyundai i20.webp",
         pricePerDay : "Rs 4500 ",
         carTitle : "Hyundai I20",
         carYear : "2016",
@@ -32,7 +31,7 @@
     },
 
     {
-        carImage : "../../src/assets/Cars fleet/Hatchback/Maruti Suzuki Alto 800.webp",
+        carImage : "../assets/Cars fleet/Hatchback/Maruti Suzuki Alto 800.webp",
         pricePerDay : "Rs 4900 ",
         carTitle : "Maruti Suzuki Alto 800",
         carYear : "2014",
@@ -46,7 +45,7 @@
     },
 
     {
-        carImage : "../../src/assets/Cars fleet/Hatchback/Maruti Suzuki Baleno.jpg",
+        carImage : "../assets/Cars fleet/Hatchback/Maruti Suzuki Baleno.jpg",
         pricePerDay : "Rs 4000 ",
         carTitle : "Maruti Suzuki Baleno",
         carYear : "2014",
@@ -60,7 +59,7 @@
     },
 
     {
-        carImage : "../../src/assets/Cars fleet/Hatchback/Maruti Suzuki Swift.jpg",
+        carImage : "../assets/Cars fleet/Hatchback/Maruti Suzuki Swift.jpg",
         pricePerDay : "Rs 5500 ",
         carTitle : "Maruti Suzuki Swift",
         carYear : "2018",
@@ -74,7 +73,7 @@
     },
 
     {
-        carImage : "../../src/assets/Cars fleet/Hatchback/Maruti Suzuki Wagon R.jpg",
+        carImage : "../assets/Cars fleet/Hatchback/Maruti Suzuki Wagon R.jpg",
         pricePerDay : "Rs 4200 ",
         carTitle : "Maruti Suzuki Wagon R",
         carYear : "2013",
@@ -88,7 +87,7 @@
     },
 
     {
-        carImage : "../../src/assets/Cars fleet/Muv/Kia Carens.webp",
+        carImage : "../assets/Cars fleet/Muv/Kia Carens.webp",
         pricePerDay : "Rs 5200 ",
         carTitle : "Kia Carens",
         carYear : "2017",
@@ -102,7 +101,7 @@
     },
 
     {
-        carImage : "../../src/assets/Cars fleet/Muv/Maruti Suzuki Ertiga.webp",
+        carImage : "../assets/Cars fleet/Muv/Maruti Suzuki Ertiga.webp",
         pricePerDay : "Rs 5000 ",
         carTitle : "Maruti Suzuki Ertiga",
         carYear : "2015",
@@ -116,7 +115,7 @@
     },
 
     {
-        carImage : "../../src/assets/Cars fleet/Muv/Maruti Suzuki XL6.webp",
+        carImage : "../assets/Cars fleet/Muv/Maruti Suzuki XL6.webp",
         pricePerDay : "Rs 5000 ",
         carTitle : "Maruti Suzuki XL6",
         carYear : "2017",
@@ -130,7 +129,7 @@
     },
 
     {
-        carImage : "../../src/assets/Cars fleet/Muv/Renault Triber.webp",
+        carImage : "../assets/Cars fleet/Muv/Renault Triber.webp",
         pricePerDay : "Rs 4500 ",
         carTitle : "Renault Triber",
         carYear : "2015",
@@ -144,7 +143,7 @@
     },
 
     {
-        carImage : "../../src/assets/Cars fleet/Muv/Toyota Innova Crysta.webp",
+        carImage : "../assets/Cars fleet/Muv/Toyota Innova Crysta.webp",
         pricePerDay : "Rs 5300 ",
         carTitle : "Toyota Innova Crysta",
         carYear : "2014",
@@ -158,7 +157,7 @@
     },
     
     {
-        carImage : "../../src/assets/Cars fleet/Sedan/Honda Amaze.webp",
+        carImage : "../assets/Cars fleet/Sedan/Honda Amaze.webp",
         pricePerDay : "Rs 5500 ",
         carTitle : "Honda Amaze",
         carYear : "2019",
@@ -172,7 +171,7 @@
     },
 
     {
-        carImage : "../../src/assets/Cars fleet/Sedan/Honda City.webp",
+        carImage : "../assets/Cars fleet/Sedan/Honda City.webp",
         pricePerDay : "Rs 5500 ",
         carTitle : "Honda City",
         carYear : "2019",
@@ -186,7 +185,7 @@
     },
 
     {
-        carImage : "../../src/assets/Cars fleet/Sedan/Hyundai Aura.webp",
+        carImage : "../assets/Cars fleet/Sedan/Hyundai Aura.webp",
         pricePerDay : "Rs 5800 ",
         carTitle : "Hyundai Aura",
         carYear : "2018",
@@ -200,7 +199,7 @@
     },
 
     {
-        carImage : "../../src/assets/Cars fleet/Sedan/Maruti Suzuki Dzire.webp",
+        carImage : "../assets/Cars fleet/Sedan/Maruti Suzuki Dzire.webp",
         pricePerDay : "Rs 6800 ",
         carTitle : "Maruti Suzuki Dzire",
         carYear : "2019",
@@ -214,7 +213,7 @@
     },
 
     {
-        carImage : "../../src/assets/Cars fleet/Sedan/Skoda Slavia.webp",
+        carImage : "../assets/Cars fleet/Sedan/Skoda Slavia.webp",
         pricePerDay : "Rs 5600 ",
         carTitle : "Skoda Slavia",
         carYear : "2017",
@@ -228,7 +227,7 @@
     },
 
     {
-        carImage : "../../src/assets/Cars fleet/Sedan/Tata Tigor.jpeg",
+        carImage : "../assets/Cars fleet/Sedan/Tata Tigor.jpeg",
         pricePerDay : "Rs 5600 ",
         carTitle : "Tata Tigor",
         carYear : "2018",
@@ -242,7 +241,7 @@
     },
 
     {
-        carImage : "../../src/assets/Cars fleet/Suv Sports/Hyundai Creta.webp",
+        carImage : "../assets/Cars fleet/Suv Sports/Hyundai Creta.webp",
         pricePerDay : "Rs 6500 ",
         carTitle : "Hyundai Creta",
         carYear : "2015",
@@ -256,7 +255,7 @@
     },
 
     {
-        carImage : "../../src/assets/Cars fleet/Suv Sports/Hyundai Venue.jpg",
+        carImage : "../assets/Cars fleet/Suv Sports/Hyundai Venue.jpg",
         pricePerDay : "Rs 5620 ",
         carTitle : "Hyundai Venue",
         carYear : "2015",
@@ -270,7 +269,7 @@
     },
 
     {
-        carImage : "../../src/assets/Cars fleet/Suv Sports/Kia Seltos.jpeg",
+        carImage : "../assets/Cars fleet/Suv Sports/Kia Seltos.jpeg",
         pricePerDay : "Rs 5620 ",
         carTitle : "Kia Seltos",
         carYear : "2018",
@@ -284,7 +283,7 @@
     },
 
     {
-        carImage : "../../src/assets/Cars fleet/Suv Sports/Kia Sonet.jpg",
+        carImage : "../assets/Cars fleet/Suv Sports/Kia Sonet.jpg",
         pricePerDay : "Rs 6230 ",
         carTitle : "Kia Sonet",
         carYear : "2015",
@@ -298,7 +297,7 @@
     },
 
     {
-        carImage : "../../src/assets/Cars fleet/Suv Sports/Tata Nexon.jpg",
+        carImage : "../assets/Cars fleet/Suv Sports/Tata Nexon.jpg",
         pricePerDay : "Rs 5230 ",
         carTitle : "Tata Nexon",
         carYear : "2013",
@@ -312,7 +311,7 @@
     },
 
     {
-        carImage : "../../src/assets/Cars fleet/Suv Sports/Tata Punch.webp",
+        carImage : "../assets/Cars fleet/Suv Sports/Tata Punch.webp",
         pricePerDay : "Rs 3530 ",
         carTitle : "Tata Punch",
         carYear : "2012",
