@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-// import Logo from "../../assets/Hero Section.jpeg";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 
