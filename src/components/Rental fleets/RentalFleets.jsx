@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import RentalFleetsCards from "./RentalFleetsCards";
 import '../Rental fleets/loader.css'
 

@@ -13,18 +13,18 @@ function FacilitiesSection() {
           <FacilitiesCard
             fCardIcon={<GiSpeedometer className="w-24 h-24 text-[#DD3219] max-lg:w-20 max-lg:h-20 group-hover:text-[#ffffff]" />}
             fCardTagline="Fast & Easy Booking"
-            fCardText="Semper aibers vestibulum fringil voluptate velit esse cillum Lorem ipsum dolor sit conse incididunt ut labore et dolore."
+            fCardText="Experience a seamless reservation process designed for speed and efficiency."
           />
 
           <FacilitiesCard
             fCardIcon={<RiSteering2Line className="w-24 h-24 text-[#DD3219] max-lg:w-20 max-lg:h-20 group-hover:text-[#ffffff]" />}
-            fCardTagline="Many Pickup Locations"
-            fCardText="Semper aibers vestibulum fringil voluptate velit esse cillum Lorem ipsum dolor sit conse incididunt ut labore et dolore."
+            fCardTagline="Multiple Pickup Locations"
+            fCardText="Access a wide network of convenient pickup points tailored to your journey."
           />
           <FacilitiesCard 
            fCardIcon={<RiPriceTag3Fill className="w-24 h-24 text-[#DD3219] max-lg:w-20 max-lg:h-20 group-hover:text-[#ffffff]" />}
-           fCardTagline="No Booking Charges"
-           fCardText="Semper aibers vestibulum fringil voluptate velit esse cillum Lorem ipsum dolor sit conse incididunt ut labore et dolore."
+           fCardTagline="No Booking Fees"
+           fCardText="Benefit from transparent pricing with absolutely no additional booking charges."
           />
         </div>
       </div>
