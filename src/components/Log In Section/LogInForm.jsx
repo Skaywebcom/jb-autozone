@@ -1,10 +1,9 @@
 import { Box, Button, FormControl, FormLabel, HStack, Input, Text, VStack } from '@chakra-ui/react'
-import React from 'react'
 import { Link } from 'react-router-dom'
 
 import './Login.css'
 
-function LogInFrom() {
+function LogInForm() {
   return (
     <Box className='box' paddingY={'50px'} maxW="md" mx="auto"  p={6} borderWidth="1px" borderRadius="lg" backgroundColor={'#F5F5F5'}>
       <VStack className='vstack'>
@@ -24,7 +23,7 @@ function LogInFrom() {
             <Button backgroundColor={'#DC2D13'} color={'white'} fontSize={'20px'} _hover={{backgroundColor: '#FFA500'} } transition={'0.2s ease-in-out'}  width={'400px'} height={'60px'}>Log In</Button>
 
            <HStack className='text-bottom' marginTop={'20px'}>
-           <Text >Don't have an account ?</Text>
+           <Text >{"Don't have an account ?"}</Text>
             <Text textDecoration={'underline'} transition={'0.2s ease-in-out'} cursor={'pointer'} _hover={{color: '#DC2D13'}} ><Link to='/signup'>Sign Up</Link></Text>
            </HStack>
         </form>
@@ -33,4 +32,4 @@ function LogInFrom() {
   )
 }
 
-export default LogInFrom
+export default LogInForm

@@ -1,7 +1,14 @@
-import React from "react";
 import { FaQuoteRight } from "react-icons/fa";
+import PropTypes from "prop-types";
 
-function ReviewsCardDetails({ text, name, role, image }) {
+ReviewsCardDetails.propTypes = {
+  text: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  role: PropTypes.string.isRequired,
+  image: PropTypes.string.isRequired,
+};
+
+function ReviewsCardDetails({ text = "", name = "", role = "", image = "" }) {
   return (
     <div className="review-card-details-container w-[50%] h-full flex flex-col justify-center items-center text-center">
       <FaQuoteRight className="w-10 h-10 text-[#DD3219]" />
@@ -18,5 +25,6 @@ function ReviewsCardDetails({ text, name, role, image }) {
     </div>
   );
 }
+
 
 export default ReviewsCardDetails;

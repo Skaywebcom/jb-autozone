@@ -1,12 +1,12 @@
 import React from 'react'
 import LogInHero from '../components/Log In Section/LogInHero'
-import LogInFrom from '../components/Log In Section/LogInFrom'
+import LogInForm from '../components/Log In Section/LogInForm'
 
 function LogInSection() {
   return (
     <>
      <LogInHero /> 
-     <LogInFrom />
+     <LogInForm />
     </>
   )
 }

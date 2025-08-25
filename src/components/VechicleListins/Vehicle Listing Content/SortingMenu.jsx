@@ -1,35 +1,41 @@
-import React, { useState, useEffect, useRef } from "react";
-import { FaCaretDown } from "react-icons/fa";
+import { useState, useEffect, useRef } from "react";
+import { ChevronDown } from "lucide-react";
 
 const sortingList = [
   {
     listName: "Last Added",
+    value: "lastAdded"
   },
   {
-    listName: "First Viewed",
+    listName: "Price: Low to High",
+    value: "priceAsc"
   },
   {
-    listName: "Cheap First",
+    listName: "Price: High to Low",
+    value: "priceDesc"
   },
   {
-    listName: "Expensive First",
+    listName: "Name: A to Z",
+    value: "nameAsc"
   },
   {
-    listName: "A to Z",
+    listName: "Name: Z to A",
+    value: "nameDesc"
   },
   {
-    listName: "Z to A",
+    listName: "Year: Newest First",
+    value: "yearNew"
   },
   {
-    listName: "Old First",
-  },
-  {
-    listName: "New First",
+    listName: "Year: Oldest First",
+    value: "yearOld"
   },
 ];
 
-function SortingMenu() {
-  const [sortName, setSortName] = useState("Last Added");
+function SortingMenu({ onSortChange, currentSort = "lastAdded", totalResults = 0 }) {
+  const [sortName, setSortName] = useState(
+    sortingList.find(item => item.value === currentSort)?.listName || "Last Added"
+  );
   const [isSortMenuVisible, setSortMenuVisible] = useState(false);
   const menuRef = useRef(null);
 
@@ -41,49 +47,80 @@ function SortingMenu() {
     };
 
     document.addEventListener("click", handleOutsideClick);
-
     return () => {
       document.removeEventListener("click", handleOutsideClick);
     };
   }, []);
 
+  // Update sort name when currentSort prop changes
+  useEffect(() => {
+    const currentItem = sortingList.find(item => item.value === currentSort);
+    if (currentItem) {
+      setSortName(currentItem.listName);
+    }
+  }, [currentSort]);
+
   const toggleSortMenu = () => {
     setSortMenuVisible(!isSortMenuVisible);
   };
 
-  const handleSortItemClick = (itemName) => {
-    setSortName(itemName);
+  const handleSortItemClick = (item) => {
+    setSortName(item.listName);
     setSortMenuVisible(false);
+    onSortChange(item.value);
   };
 
   return (
-    <div className="sorting w-[15rem] h-12 bg-white relative">
-      <div className="flex justify-start items-center h-full">
-        <p className="mr-4 text-base">Sort by</p>
+    <div className="sorting-container flex flex-col sm:flex-row sm:items-center sm:justify-between w-full gap-4">
+      {/* Results count */}
+      <div className="text-sm text-gray-600 font-medium">
+        {totalResults > 0 ? `Showing ${totalResults} vehicles` : 'No vehicles found'}
+      </div>
+
+      {/* Sorting dropdown */}
+      <div className="flex items-center gap-3">
+        <span className="text-sm font-medium text-gray-700 whitespace-nowrap">Sort by:</span>
         <div
-          className="sorting-menu-container w-[10rem] h-10 bg-[#F5F5F5] flex justify-center items-center gap-2"
-          onClick={toggleSortMenu}
+          className="sorting-menu-container relative min-w-[200px]"
           ref={menuRef}
         >
-          <p className="text-[#7a7777] cursor-pointer">{sortName}</p>
-          <FaCaretDown className="w-4 h-4" />
+          <button
+            className="w-full bg-white border border-gray-300 rounded-lg px-4 py-2.5 flex justify-between items-center text-sm font-medium text-gray-700 hover:bg-gray-50 hover:border-gray-400 focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-red-500 transition-all duration-200 shadow-sm"
+            onClick={toggleSortMenu}
+            aria-expanded={isSortMenuVisible}
+            aria-haspopup="listbox"
+          >
+            <span className="truncate">{sortName}</span>
+            <ChevronDown 
+              className={`h-4 w-4 text-gray-500 transition-transform duration-200 ml-2 flex-shrink-0 ${
+                isSortMenuVisible ? 'rotate-180' : ''
+              }`} 
+            />
+          </button>
+
+          {isSortMenuVisible && (
+            <div className="absolute top-full left-0 right-0 mt-2 bg-white border border-gray-300 rounded-lg shadow-lg z-50 max-h-64 overflow-y-auto">
+              <ul className="py-1" role="listbox">
+                {sortingList.map((list, index) => (
+                  <li key={index} role="option">
+                    <button
+                      onClick={() => handleSortItemClick(list)}
+                      className={`w-full text-left px-4 py-3 text-sm transition-colors duration-150 hover:bg-red-50 hover:text-red-600 focus:outline-none focus:bg-red-50 focus:text-red-600 ${
+                        list.value === currentSort 
+                          ? 'bg-red-100 text-red-700 font-medium' 
+                          : 'text-gray-700'
+                      }`}
+                      tabIndex={0}
+                    >
+                      {list.listName}
+                    </button>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
         </div>
       </div>
-      {isSortMenuVisible && (
-        <div className="w-[12rem] mt-2 overflow-y-scroll h-72 absolute top-15 left-9">
-          <ul className="bg-white">
-            {sortingList.map((list, index) => (
-              <li
-                onClick={() => handleSortItemClick(list.listName)}
-                className="w-full h-10 bg-late-200 flex items-center mb-2 pl-8 text-overflow-ellipsis hover:bg-[#DC2D13] hover:text-white cursor-pointer"
-                key={index}
-              >
-                {list.listName}
-              </li>
-            ))}
-          </ul>
-        </div>
-      )}
     </div>
   );
 }

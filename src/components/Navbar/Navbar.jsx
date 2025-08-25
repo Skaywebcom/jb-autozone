@@ -1,10 +1,9 @@
 // Navbar.jsx
 
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import Logo from "../../assets/Logo.png";
 import { Link } from "react-router-dom";
 import Dropdown from "./Dropdown";
-import UpperNav from "../UperNav/UpperNav";
 import Hamburger from "./Hamburger";
 
 function Navbar() {
@@ -38,9 +37,11 @@ function Navbar() {
   }, []);
   return (
     <>
-      <div  className={`nav-container ${
-          isFullWidth ? "w-[100%] px-[15%] left-[0] top-1 m-auto bg-gradient-to-b from-[#00000080] to-transparent" : "w-9/12 left-[10%] top-10 px-10"
-        }  fixed max-lg:absolute top-[5%]  z-50 h-20 flex items-center justify-between  max-lg:px-2`} onMouseLeave={() => setIsDropdownVisible(false)}>
+      <div  className={`nav-container fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
+    isFullWidth
+      ? "bg-black/60 backdrop-blur-sm py-4"
+      : "bg-black/50 py-6"
+  } flex items-center justify-between px-6 max-md:px-4`} onMouseLeave={() => setIsDropdownVisible(false)}>
         <div className="left-nav">
           <Link to="/">
             <img src={Logo} alt="" className="w-24" />
@@ -86,7 +87,7 @@ function Navbar() {
             </Link>
           </ul>
 
-          <div className="profile flex justify-center items-center gap-2 max-[440px]:hidden">
+          {/* <div className="profile flex justify-center items-center gap-2 max-[440px]:hidden">
             <Link>
               <i className="ri-user-line bg-white text-black p-3 text-2xl rounded-full hover:bg-[#DC2D13] hover:text-white transition-all duration-150 ease-in-out"></i>
             </Link>
@@ -102,7 +103,7 @@ function Navbar() {
                 </div>
               </Link>
             </div>
-          </div>
+          </div> */}
 
           <div className="menu-icon hidden max-lg:block w-7  " onClick={toggleHamburger}>
           {isMenuToggle ? (

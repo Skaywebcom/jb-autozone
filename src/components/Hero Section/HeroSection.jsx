@@ -7,9 +7,9 @@ function HeroSection() {
 
   return (
     <div>
-      <div className="hero-container w-full h-[100vh] -z-50  top-0 ">
-        <div className="hero-bg w-full h-screen bg-hero-pattern bg-no-repeat bg-center bg-cover">
-          <div className="hero-content bg-[#000000a2] w-full h-screen flex flex-col justify-center items-center">
+      <div className="hero-container w-full relative pt-24 md:pt-20 ">
+        <div className="hero-bg w-full min-h-[90vh] bg-hero-pattern bg-no-repeat bg-center bg-cover">
+          <div className="hero-content bg-[#000000a2] w-full min-h-[90vh] flex flex-col justify-center items-center">
             
             <div className="hero-heading flex flex-col justify-center items-center">
               <h1 className="text-6xl text-white font-bold tracking-wide max-md:text-4xl max-[448px]:text-2xl">

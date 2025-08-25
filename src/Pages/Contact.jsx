@@ -1,7 +1,7 @@
 import React from 'react'
 import ContactHero from '../components/Contact/ContactHero'
 import ContactSection from '../components/Contact/ContactSection'
-import UpperNav from '../components/UperNav/UpperNav'
+import UpperNav from '../components/UpperNav/UpperNav'
 
 function Contact() {
   return (

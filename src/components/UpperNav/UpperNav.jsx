@@ -1,4 +1,3 @@
-import React from 'react';
 
 function UpperNav({ paginationLeft }) {
   console.log('paginationLeft:', paginationLeft);
